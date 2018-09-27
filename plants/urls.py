@@ -1,6 +1,9 @@
-from django.urls import path
-from .views import ListPlantsView
+from django.urls import path, include
+from rest_framework import routers
+from .views import PlantViewSet, PlantDataPointViewSet
 
-urlpatterns = [
-  path('plants/', ListPlantsView.as_view(), name="plants-all")
-]
+router = routers.DefaultRouter()
+router.register(r'plants', PlantViewSet)
+router.register(r'plant-data', PlantDataPointViewSet)
+
+urlpatterns = router.urls
