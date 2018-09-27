@@ -1,0 +1,13 @@
+{
+  "name": "Scoville",
+  "description": "An api to receive plant data",
+  "image": "heroku/python",
+  "repository": "https://github.com/SDupZ/scoville",
+  "keywords": [
+    "python",
+    "django"
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
